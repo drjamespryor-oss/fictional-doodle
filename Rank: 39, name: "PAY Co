@@ -1,0 +1,82 @@
+interface PayDashboard {
+  rank: number;
+  name: string;
+  function: string;
+  category:
+    | "Balance"
+    | "Cash Flow"
+    | "Settlement"
+    | "Transaction"
+    | "Account"
+    | "Operations"
+    | "Analytics"
+    | "Control";
+  recommended?: boolean;
+}
+
+const payDashboards: PayDashboard[] = [
+  { rank: 1, name: "PAY Dashboard", function: "Overall payment activity", category: "Operations" },
+  { rank: 2, name: "PAY Balance", function: "Current cash balance", category: "Balance", recommended: true },
+  { rank: 3, name: "PAY Cash", function: "Cash position", category: "Balance", recommended: true },
+  { rank: 4, name: "PAY Credit", function: "Credits received", category: "Cash Flow", recommended: true },
+  { rank: 5, name: "PAY Debit", function: "Debits and outflows", category: "Cash Flow" },
+  { rank: 6, name: "PAY Inflow", function: "Money entering", category: "Cash Flow" },
+  { rank: 7, name: "PAY Outflow", function: "Money leaving", category: "Cash Flow" },
+  { rank: 8, name: "PAY Payout", function: "Payout activity", category: "Settlement" },
+  { rank: 9, name: "PAY Settlement", function: "Settlement activity", category: "Settlement", recommended: true },
+  { rank: 10, name: "PAY Proceeds", function: "Transaction proceeds", category: "Settlement", recommended: true },
+  { rank: 11, name: "PAY Redemption", function: "Redemption proceeds", category: "Settlement" },
+  { rank: 12, name: "PAY Distribution", function: "Cash distributions", category: "Cash Flow" },
+  { rank: 13, name: "PAY Transaction", function: "Transaction activity", category: "Transaction" },
+  { rank: 14, name: "PAY Transfer", function: "Transfers", category: "Transaction" },
+  { rank: 15, name: "PAY Deposit", function: "Deposits", category: "Cash Flow" },
+  { rank: 16, name: "PAY Withdrawal", function: "Withdrawals", category: "Cash Flow" },
+  { rank: 17, name: "PAY Payment", function: "Payments", category: "Transaction" },
+  { rank: 18, name: "PAY Payback", function: "Returned funds", category: "Settlement" },
+  { rank: 19, name: "PAY Payoff", function: "Full settlement", category: "Settlement" },
+  { rank: 20, name: "PAY Paydown", function: "Partial settlement", category: "Settlement" },
+  { rank: 21, name: "PAY Fee", function: "Fees", category: "Transaction" },
+  { rank: 22, name: "PAY Charge", function: "Charges", category: "Transaction" },
+  { rank: 23, name: "PAY Adjustment", function: "Account adjustments", category: "Account" },
+  { rank: 24, name: "PAY Activity", function: "Complete activity history", category: "Transaction" },
+  { rank: 25, name: "PAY Flow", function: "Cash-flow monitoring", category: "Cash Flow", recommended: true },
+  { rank: 26, name: "PAY Monitor", function: "Live payment monitoring", category: "Operations" },
+  { rank: 27, name: "PAY Tracker", function: "Payment tracking", category: "Operations" },
+  { rank: 28, name: "PAY Ledger", function: "Transaction ledger", category: "Account" },
+  { rank: 29, name: "PAY Journal", function: "Transaction journal", category: "Account" },
+  { rank: 30, name: "PAY Statement", function: "Account statement", category: "Account" },
+  { rank: 31, name: "PAY Position", function: "Cash and position overview", category: "Balance" },
+  { rank: 32, name: "PAY Equity", function: "Account equity", category: "Balance" },
+  { rank: 33, name: "PAY Buying Power", function: "Available purchasing funds", category: "Balance" },
+  { rank: 34, name: "PAY Net Cash", function: "Net cash position", category: "Balance" },
+  { rank: 35, name: "PAY Cash Flow", function: "Cash-flow dashboard", category: "Cash Flow" },
+  { rank: 36, name: "PAY Settlement Hub", function: "Central settlement view", category: "Settlement" },
+  { rank: 37, name: "PAY Treasury", function: "Cash-management dashboard", category: "Operations", recommended: true },
+  { rank: 38, name: "PAY Control", function: "Payment-control center", category: "Control", recommended: true },
+  { rank: 39, name: "PAY Command", function: "Central dashboard", category: "Control", recommended: true },
+  { rank: 40, name: "PAY Operations", function: "Payment operations", category: "Operations" },
+  { rank: 41, name: "PAY Intelligence", function: "Analytics dashboard", category: "Analytics" },
+  { rank: 42, name: "PAY Infinity", function: "Continuous cash view", category: "Analytics" }
+];
+
+const screenshotRecommendations = [
+  "PAY BALANCE",
+  "PAY CASH",
+  "PAY CREDIT",
+  "PAY FLOW",
+  "PAY PROCEEDS",
+  "PAY SETTLEMENT"
+];
+
+const institutionalTopThree = [
+  "PAY COMMAND",
+  "PAY TREASURY",
+  "PAY CONTROL"
+];
+
+const cashSettlementLabel = {
+  dashboard: "PAY CREDIT",
+  event: "CASH SETTLEMENT",
+  combined: "PAY CREDIT — CASH SETTLEMENT",
+  description: "Tracks a cash credit resulting from a settlement event."
+};
